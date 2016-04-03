@@ -69,6 +69,54 @@ public class SalesItemTest
         assertEquals("test name", salesIte1.getName());
         assertEquals(1000, salesIte1.getPrice());
     }
+    @Test
+    public void testDuplicateAuthors()
+    {
+        SalesItem salesIte1 = new SalesItem("Printer", 25000);
+        salesIte1.addComment("Edward", "This printer is on sale", 5);
+        salesIte1.addComment("Edward", "This printer is on sale", 5);
+    }
+
+    @Test
+    public void testRatingBeyondRange()
+    {
+        SalesItem salesIte1 = new SalesItem("iPhone7", 50000);
+        salesIte1.addComment("Edward", "This is a smart phone", 6);
+        salesIte1.addComment("Edward", "This is a smart phone", 0);
+        salesIte1.addComment("Maria", "Veyy true", 0);
+    }
+
+    @Test
+    public void findMostHelpfulComment()
+    {
+        SalesItem Watch = new SalesItem("Swiss Army", 150000);
+    }
+
+    @Test
+    public void testinit()
+    {
+        // create salesItem object.
+        SalesItem salesite1 = new SalesItem("test name" , 1000);
+        assertEquals("test name" , salesite1.getName());
+        assertEquals(1000, salesite1.getPrice());
+    }
+
+    @Test
+    public void FurtherAutomatedTests()
+    {
+        SalesItem salesIte1 = new SalesItem("Motorla Droid Turbo", 17500);
+        Comment comment1 = new Comment("Edward", "The Motorola phone is not worth the price", -1);
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 
